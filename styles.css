@@ -1,3 +1,9 @@
+:root {
+    --desktop-left-side: 20%;
+    --desktop-right-side: 80%;
+    --mobile-right-side: 100%;
+}
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -7,8 +13,8 @@ body {
     height: 38px; /* Change Spacer in HTML */
     position: fixed;
     top: 0px;
-    width: 75%;
-    left: 25%;
+    width: var(--desktop-right-side);
+    left: var(--desktop-left-side);
     background-color: #333;
     color: #fff;
     display: flex;
@@ -22,7 +28,7 @@ body {
     position: fixed;
     top: 32px;
     left: 100%; /* Off-screen initially */
-    width: 75%;
+    width: var(--desktop-right-side);
     height: 100vh;
     background-color: #333;
     display: flex;
@@ -33,7 +39,7 @@ body {
 }
 
 .nav-links.active {
-    left: 25%; 
+    left: var(--desktop-left-side); 
     opacity: 1;
     visibility: visible; 
 }
@@ -52,7 +58,7 @@ body {
     position: fixed;
     display: block;
     height: 100%;
-    width: 25%;
+    width: var(--desktop-left-side);
     background-color: #283845;
 }
 
@@ -60,14 +66,14 @@ body {
     display: none;
 }
 .main-content {
-    margin-left: 25%;
-    width: 75%;
+    margin-left: var(--desktop-left-side);
+    width: var(--desktop-right-side);
 }
 
 .desktop-navbar {
     display: flex;
     background-image: url("assets/2024-02-10_Nav Background.png");
-    height: 400px;
+    height: 300px;
     align-items: center;
     justify-content: space-around;
     padding: 20px 20px;
@@ -83,6 +89,53 @@ body {
     padding: 16px;
     width: 16%;
     height: 75%;
+}
+
+.desktop-image-wrapper {
+    height: 400px;
+    background-image: url("assets/2024-02-10_Bookshelf\ Background.png");
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.desktop-headshot {
+    align-self: end;
+    justify-self: center;
+    width: 50%;
+    padding: 16px;
+    object-fit: contain;
+}
+
+.desktop-logo {
+    align-self: start;
+    justify-self: center;
+    width: 50%;
+    object-fit: contain;
+}
+
+.contact-links {
+    align-self: end;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    align-items: center;
+    display: flex;
+    padding: 8px;
+}
+
+.contact-link-image {
+    width: 32px;
+}
+
+.contact-link-text {
+    color: white;
+    margin-left: 8px;
 }
 
 /* Hamburger Menu */
@@ -104,12 +157,12 @@ body {
 /* Responsive Behavior */
 @media (max-width: 768px) {
     .navbar {
-        width: 100%;
+        width: var(--mobile-right-side);
         left: 0%;
     }
 
     .nav-links {
-        width: 100%;
+        width: var(--mobile-right-side);
     }
 
     .nav-links.active {
