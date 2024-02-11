@@ -4,6 +4,7 @@ body {
 }
 
 .navbar {
+    height: 38px; /* Change Spacer in HTML */
     position: fixed;
     top: 0px;
     width: 75%;
@@ -64,7 +65,24 @@ body {
 }
 
 .desktop-navbar {
-    display: block;
+    display: flex;
+    background-image: url("assets/2024-02-10_Nav Background.png");
+    height: 400px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 20px;
+}
+
+.desktop-navbar-item {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px;
+    width: 16%;
+    height: 75%;
 }
 
 /* Hamburger Menu */
