@@ -92,7 +92,7 @@ body {
 }
 
 .desktop-image-wrapper {
-    height: 400px;
+    height: 60%;
     background-image: url("assets/2024-02-10_Bookshelf\ Background.png");
     display: grid;
     justify-content: start;
@@ -126,7 +126,7 @@ body {
 .contact-link {
     align-items: center;
     display: flex;
-    padding: 8px;
+    padding: 4px 8px;
 }
 
 .contact-link-image {
@@ -136,6 +136,36 @@ body {
 .contact-link-text {
     color: white;
     margin-left: 8px;
+}
+
+.desktop-tag-section {
+    height: 40%;
+    background-image: url("assets/2024-02-10_Tags\ Background.png");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    padding: 16px;
+    color: white;
+}
+
+.desktop-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    cursor: pointer;
+    margin: 4px;
+    padding: 4px 8px;
+    color: white;
+    border: 1px white solid;
+    opacity: .6;
+}
+
+.tag:hover {
+    opacity: 1;
+    background-color: #ffffff22;
 }
 
 /* Hamburger Menu */
