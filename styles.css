@@ -121,7 +121,7 @@ body {
 
 /* Customize the entire scrollbar */
 ::-webkit-scrollbar {
-    width: 8px; /* Adjust the width */
+    width: 0px; /* Adjust the width */
   }
   
   /* Style the scrollbar track (background) */
