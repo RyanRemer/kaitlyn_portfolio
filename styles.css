@@ -1,6 +1,8 @@
 :root {
     --desktop-left-side: 20%;
     --desktop-right-side: 80%;
+    --desktop-padding: 64px 300px 64px 64px;
+    --mobile-padding: 64px;
     --mobile-right-side: 100%;
 }
 
@@ -8,6 +10,14 @@ body {
     margin: 0;
     font-family: 'montserrat', sans-serif;
     line-height: 1.7em;
+}
+
+.section {
+    padding: var(--desktop-padding);
+}
+
+.infographic {
+    width: 100%;
 }
 
 .navbar {
@@ -77,7 +87,7 @@ body {
     height: 300px;
     align-items: center;
     justify-content: start;
-    padding: 64px 300px 64px 64px;
+    padding: var(--desktop-padding);
 }
 
 .desktop-navbar-item {
@@ -240,6 +250,10 @@ h3 {
     .main-content {
         margin-left: 0%;
         width: 100%;
+    }
+
+    .section {
+        padding: var(--mobile-padding);
     }
 }
 
